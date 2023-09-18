@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+:root {
+	--bodycolor: rgba(0, 0, 0, 0.3);
+	--formacolor: #fff;
+	--bordercolor: #555;
+	--btncolor: #2e86de;
+	--linkcolor: #333333;
+	--boxshadow: 2px 2px 8px 1px #818181;
+}
+
+.backdrop {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--bodycolor);
+}
+
+.whitebackgr {
+	position: absolute;
+	background-color: var(--formacolor);
+	width: 380px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 4px;
+	box-shadow: var(--boxshadow);
+}
+
+.logIn {
+	padding-left: 12px;
+	border-left: 15px solid var(--btncolor);
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+}
+
+.forma {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.labelinfo {
+	width: 100%;
+	position: relative;
+}
+
+.whInput {
+	width: 300px;
+	height: 50px;
+	padding: 10px 15px;
+	border-radius: 4px;
+	outline: none;
+}
+
+.whInput:focus {
+	box-shadow: var(--boxshadow);
+}
+
+.userName, .passWord {
+	border: 2px solid var(--bordercolor);
+	font-size: 16px;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.userlabel {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 15px;
+	pointer-events: none;
+	background-color: var(--formacolor);
+	color: var(--bordercolor);
+	transition: 0.1s;
+}
+
+.whInput:focus~.userlabel, .whInput:not(:placeholder-shown)~.userlabel {
+	top: 0;
+	transform: translateY(-50%) scale(0.75);
+}
+
+.bTn {
+	border: none;
+	background-color: var(--btncolor);
+	color: var(--formacolor);
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	height: 50px;
+	padding: 10px 15px;
+	border-radius: 4px;
+
+}
+
+.formlist {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.forgetItem {
+	text-decoration: none;
+}
+
+.signUp, .forgetItem {
+	color: var(--linkcolor);
+	font-size: 18px;
+}
+
+.signUp {
+	font-weight: 500;
+}
